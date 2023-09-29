@@ -24,34 +24,36 @@ const collapseData = [
 ];
 
 const Collapse = () => {
-  const [selected, setSelected] = useState(null);
+  const [openItems, setOpenItems] = useState([]);
 
   const toggle = (i) => {
-    if (selected === i) {
-      return setSelected(null);
+    if (openItems.includes(i)) {
+      setOpenItems(openItems.filter((item) => item !== i));
+    } else {
+      setOpenItems([...openItems, i]);
     }
-
-    setSelected(i);
   };
 
   return (
     <div className="wrapper">
       <div className="accordion">
         {collapseData.map((collapseItem, i) => (
-          <div className="collapse-item">
+          <div className="collapse-item" key={i}>
             <div className="collapse-title">
               <h2>{collapseItem.title}</h2>
               <span>
                 <img
                   src={CollapseVector}
-                  className={selected === i ? "rotate180" : "rotate360"}
+                  className={openItems.includes(i) ? "rotate180" : "rotate360"}
                   onClick={() => toggle(i)}
                 />
               </span>
             </div>
             <div
               className={
-                selected === i ? "collapse-content show" : "collapse-content"
+                openItems.includes(i)
+                  ? "collapse-content show"
+                  : "collapse-content"
               }
             >
               {collapseItem.content}
