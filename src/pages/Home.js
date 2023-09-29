@@ -8,10 +8,12 @@ import homeBackgroundImage from "../images/IMG.png";
 const Home = () => {
   return (
     <div className="main-container">
-      <Header />
-      <Banner backgroundImage={homeBackgroundImage} showText={true} />{" "}
-      {/* Affiche le texte sur la page d'accueil */}
-      <Gallery />
+      <div className="second-container">
+        <Header />
+        <Banner backgroundImage={homeBackgroundImage} showText={true} />{" "}
+        {/* Affiche le texte sur la page d'accueil */}
+        <Gallery />
+      </div>
       <Footer />
     </div>
   );

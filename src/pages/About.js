@@ -8,10 +8,12 @@ import Collapse from "../components/Collapse";
 const About = () => {
   return (
     <div className="main-container">
-      <Header />
-      <Banner backgroundImage={aboutBackgroundImage} />
-      {/* Passez l'image comme une propriété */}
-      <Collapse />
+      <div className="second-container">
+        <Header />
+        <Banner backgroundImage={aboutBackgroundImage} />
+        {/* Passez l'image comme une propriété */}
+        <Collapse />
+      </div>
       <Footer />
     </div>
   );
