@@ -11,7 +11,8 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-        <Route path="/info" element={<Info />} />
+        <Route path="/info/:id" element={<Info />} />
+        {/* Assure que le chemin vers Info peut prendre le paramètre ID */}
         <Route path="/error" element={<Error />} />
       </Routes>
     </BrowserRouter>
