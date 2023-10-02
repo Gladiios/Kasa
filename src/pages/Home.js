@@ -10,7 +10,7 @@ const Home = () => {
     <div className="main-container">
       <div className="second-container">
         <Header />
-        <Banner backgroundImage={homeBackgroundImage} showText={true} />{" "}
+        <Banner backgroundImage={homeBackgroundImage} showText={true} />
         {/* Affiche le texte sur la page d'accueil */}
         <Gallery />
       </div>

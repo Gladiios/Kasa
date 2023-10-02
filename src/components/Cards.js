@@ -1,6 +1,7 @@
 import React from "react";
 import data from "./data.json";
-console.log(data[0].cover);
+
+const { appartementData } = data;
 
 const Cards = ({ card }) => {
   return (

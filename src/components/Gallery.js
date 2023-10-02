@@ -3,10 +3,12 @@ import data from "./data.json";
 import Cards from "./Cards";
 console.log(data);
 
+const { appartementData } = data;
+
 const Gallery = () => {
   return (
     <div className="gallery-container">
-      {data.slice(0, 6).map((card) => (
+      {appartementData.slice(0, 6).map((card) => (
         <Cards key={card.id} card={card} />
       ))}
     </div>

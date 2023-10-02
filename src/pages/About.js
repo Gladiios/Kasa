@@ -2,7 +2,7 @@ import React from "react";
 import Header from "../components/Header";
 import Banner from "../components/Banner";
 import Footer from "../components/Footer";
-import aboutBackgroundImage from "../images/img-src-2.png"; // Importez l'image pour la page About
+import aboutBackgroundImage from "../images/img-src-2.png";
 import Collapse from "../components/Collapse";
 
 const About = () => {
@@ -11,7 +11,7 @@ const About = () => {
       <div className="second-container">
         <Header />
         <Banner backgroundImage={aboutBackgroundImage} />
-        {/* Passez l'image comme une propriété */}
+        {/* Passe l'image comme une propriété */}
         <Collapse />
       </div>
       <Footer />
