@@ -1,7 +1,6 @@
 import React from "react";
 import data from "./data.json";
 import Cards from "./Cards";
-console.log(data);
 
 const { appartementData } = data;
 

@@ -1,14 +1,15 @@
 import React from "react";
-import data from "./data.json";
-
-const { appartementData } = data;
+import Info from "../pages/Info";
+import { NavLink } from "react-router-dom";
 
 const Cards = ({ card }) => {
   return (
-    <div className="gallery-card">
-      <img src={card.cover} className="card-img" />
-      <h4 className="card-title">{card.title}</h4>
-    </div>
+    <NavLink to="/Info">
+      <div className="gallery-card">
+        <img src={card.cover} className="card-img" />
+        <h4 className="card-title">{card.title}</h4>
+      </div>
+    </NavLink>
   );
 };
 

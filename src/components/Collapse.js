@@ -1,10 +1,8 @@
 import React, { useState } from "react";
 import CollapseVector from "../images/Vector.svg";
-import data from "./data.json";
 
-const { aboutCollapseData } = data;
-
-const Collapse = () => {
+const Collapse = ({ data }) => {
+  //PASSE LA PROP DATA AU COMPOSANT COLLAPSE
   const [openItems, setOpenItems] = useState([]);
 
   const toggle = (i) => {
@@ -18,29 +16,34 @@ const Collapse = () => {
   return (
     <div className="wrapper">
       <div className="accordion">
-        {aboutCollapseData.map((collapseItem, i) => (
-          <div className="collapse-item" key={i}>
-            <div className="collapse-title">
-              <h2>{collapseItem.title}</h2>
-              <span>
-                <img
-                  src={CollapseVector}
-                  className={openItems.includes(i) ? "rotate180" : "rotate360"}
-                  onClick={() => toggle(i)}
-                />
-              </span>
+        {data.map(
+          //MAP DE DATA
+          (item, i) => (
+            <div className="collapse-item" key={i}>
+              <div className="collapse-title">
+                <h2>{item.title}</h2>
+                <span>
+                  <img
+                    src={CollapseVector}
+                    className={
+                      openItems.includes(i) ? "rotate180" : "rotate360"
+                    }
+                    onClick={() => toggle(i)}
+                  />
+                </span>
+              </div>
+              <div
+                className={
+                  openItems.includes(i)
+                    ? "collapse-content show"
+                    : "collapse-content"
+                }
+              >
+                {item.content}
+              </div>
             </div>
-            <div
-              className={
-                openItems.includes(i)
-                  ? "collapse-content show"
-                  : "collapse-content"
-              }
-            >
-              {collapseItem.content}
-            </div>
-          </div>
-        ))}
+          )
+        )}
       </div>
     </div>
   );
