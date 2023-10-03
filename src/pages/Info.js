@@ -19,7 +19,7 @@ const Info = () => {
       <div className="second-container">
         <Header />
         {appartement.pictures && <Carrousel pictures={appartement.pictures} />}
-        <div>
+        <div className="collapse-info">
           <Collapse
             data={[{ title: "Description", content: appartement.description }]}
           />
@@ -27,7 +27,13 @@ const Info = () => {
             data={[
               {
                 title: "Équipements",
-                content: appartement.equipments.join(" "),
+                content: (
+                  <ul>
+                    {appartement.equipments.map((equipment, index) => (
+                      <li key={index}>{equipment}</li>
+                    ))}
+                  </ul>
+                ),
               },
             ]}
           />

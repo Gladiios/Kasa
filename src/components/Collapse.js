@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import CollapseVector from "../images/Vector.svg";
 
-const Collapse = ({ data }) => {
+const Collapse = ({ data, className }) => {
   //PASSE LA PROP DATA AU COMPOSANT COLLAPSE
   const [openItems, setOpenItems] = useState([]);
 

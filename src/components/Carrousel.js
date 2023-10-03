@@ -22,10 +22,14 @@ const CarouselComponent = ({ pictures }) => {
   }
 
   return (
-    <div className="carousel">
-      <img src={pictures[currentIndex]} alt={`Slide ${currentIndex}`} />
-      <img src={arrowLeft} onClick={prevSlide} />
-      <img src={arrowRight} onClick={nextSlide} />
+    <div className="carrousel">
+      <img
+        src={pictures[currentIndex]}
+        alt={`Slide ${currentIndex}`}
+        className="carrousel-picture"
+      />
+      <img src={arrowLeft} onClick={prevSlide} className="arrow arrow-left" />
+      <img src={arrowRight} onClick={nextSlide} className="arrow arrow-right" />
     </div>
   );
 };
