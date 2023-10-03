@@ -6,6 +6,7 @@ import Collapse from "../components/Collapse";
 import data from "../components/data.json";
 import Error from "./Error";
 import Carrousel from "../components/Carrousel";
+import Tags from "../components/Tags";
 
 const Info = () => {
   const { id } = useParams();
@@ -19,6 +20,7 @@ const Info = () => {
       <div className="second-container">
         <Header />
         {appartement.pictures && <Carrousel pictures={appartement.pictures} />}
+        <Tags />
         <div className="collapse-info">
           <Collapse
             data={[{ title: "Description", content: appartement.description }]}
