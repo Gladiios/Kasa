@@ -13,11 +13,13 @@ const Tags = () => {
   return (
     <div className="appartement-info">
       <div className="appartement-line1">
-        <div className="appartement-title">
-          <p>{appartement.title}</p>
-        </div>
-        <div className="appartement-location">
-          <p>{appartement.location}</p>
+        <div className="appartement-column1">
+          <div className="appartement-title">
+            <p>{appartement.title}</p>
+          </div>
+          <div className="appartement-location">
+            <p>{appartement.location}</p>
+          </div>
         </div>
         <div className="host">
           <p>{appartement.host.name}</p>
