@@ -28,6 +28,9 @@ const CarouselComponent = ({ pictures }) => {
         alt={`Slide ${currentIndex}`}
         className="carrousel-picture"
       />
+      <p className="carrousel-index">
+        {currentIndex + 1} / {pictures.length}
+      </p>
       <img src={arrowLeft} onClick={prevSlide} className="arrow arrow-left" />
       <img src={arrowRight} onClick={nextSlide} className="arrow arrow-right" />
     </div>
