@@ -1,4 +1,4 @@
-.appartement-title,.appartement-location,.host
+.appartement-title,.appartement-location,.host, .host-2
     color: #FF6060
     font-family: Montserrat
     margin: 0
@@ -13,16 +13,19 @@
 .appartement-location,.host
     font-size: 18px
 
-.host
+.host, .host-2
     display: flex
     margin-top: 18px
 
-.host img
+.host-2
+    display: none
+
+.host img, .host-2 img
     border-radius: 100px
     width: 64px
     height: 64px
 
-.host p
+.host p, .host-2 p
     padding-right: 15px
 
 .appartement-line1, .appartement-line2
@@ -46,3 +49,30 @@
 
 .fa-solid
     font-size: 32px
+
+@media ( max-width: 801px  )
+    .host
+        display: none
+    .appartement-line2
+        display: flex
+        justify-content: space-between
+        flex-wrap: wrap
+    .host-2
+        order: 2
+        margin: 0
+        display: flex
+    .host-2 p
+        display: flex
+        flex-wrap: wrap
+    .star-rating
+        order: 1
+    .tags
+        flex-basis: 100%
+        margin-bottom: 20px
+    .collapse-info
+        flex-direction: column
+        width: 100%
+    .collapse-info .wrapper
+        width: 100%
+    .fa-solid
+        font-size: 20px

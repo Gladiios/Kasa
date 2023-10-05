@@ -34,6 +34,10 @@ const Tags = () => {
             </span>
           ))}
         </div>
+        <div className="host-2">
+          <p>{appartement.host.name}</p>
+          <img src={appartement.host.picture}></img>
+        </div>
         <div className="star-rating">
           <StarRating rating={appartement.rating} />
         </div>
