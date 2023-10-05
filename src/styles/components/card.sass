@@ -13,3 +13,27 @@
     color: white
     font-family: Montserrat
     margin-left: 10px
+    z-index: 4
+
+.gallery-card:after
+    position: absolute
+    content: ""
+    height: 99%
+    width: 100%
+    top: 0
+    left: 0
+    background: linear-gradient(to bottom, rgba(255,0,0,0) 50%,rgba(0, 0, 0, 0.6) 100%)
+    border-radius: 20px
+
+@media ( max-width: 801px  )
+    .gallery-container a, .gallery-card img
+        width: 100%
+        height: 255px
+        object-fit: cover
+        object-position: center
+        margin: 0
+        padding: 0
+    .gallery-container a
+        margin-bottom: 25px
+    .gallery-card
+        margin: 0
