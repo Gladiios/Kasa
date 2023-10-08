@@ -13,7 +13,7 @@ const App = () => {
         <Route path="/about" element={<About />} />
         <Route path="/info/:id" element={<Info />} />
         {/* Assure que le chemin vers Info peut prendre le paramètre ID */}
-        <Route path="/error" element={<Error />} />
+        <Route path="*" element={<Error />} />
       </Routes>
     </BrowserRouter>
   );

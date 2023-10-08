@@ -6,7 +6,8 @@ const Footer = () => {
     <div className="footer">
       <img id="logo-footer" src={logoKasa} alt="logo kasa" />
       <p>
-        <i class="fa-regular fa-copyright"></i> 2020 Kasa. All right reserved
+        <i className="fa-regular fa-copyright"></i> 2020 Kasa. All right
+        reserved
       </p>
     </div>
   );
